@@ -24,4 +24,4 @@ npm start
 ---
 Используемые языки: HTML, CSS, JavaScript, API, Webpack.
 
-Ссылка на сайт: 
+Ссылка на сайт:  https://adelinakh.github.io/mesto-react/
