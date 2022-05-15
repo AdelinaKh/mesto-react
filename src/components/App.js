@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
@@ -6,11 +6,11 @@ import ImagePopup from "./ImagePopup";
 import PopupWithForm from "./PopupWithForm";
 
 function App() {
-  const [isEditProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
-  const [isAddPlacePopupOpen, setAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
-  const [name, setName] = React.useState("");
-  const [selectedCard, setSelectedCard] = React.useState(null);
+  const [isEditProfilePopupOpen, setEditProfilePopupOpen] = useState(false);
+  const [isAddPlacePopupOpen, setAddPlacePopupOpen] = useState(false);
+  const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [selectedCard, setSelectedCard] = useState(null);
 
   function handleChangeName(evt) {
     setName(evt.target.value);
@@ -36,7 +36,7 @@ function App() {
   }
 
 //Escape
-  React.useEffect(() => {
+  useEffect(() => {
     if (
       isEditProfilePopupOpen ||
       isAddPlacePopupOpen ||

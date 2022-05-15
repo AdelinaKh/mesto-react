@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import profileIcon from "../images/profileIcon.svg";
 import api from "../utils/api";
 import Card from "./Card";
 
 function Main(props) {
-  const [userName, setUserName] = React.useState('');
-  const [userDescription, setUserDescription] = React.useState('');
-  const [userAvatar, setUserAvatar] = React.useState('');
-  const [cards, setCards] = React.useState([]);
+  const [userName, setUserName] = useState('');
+  const [userDescription, setUserDescription] = useState('');
+  const [userAvatar, setUserAvatar] = useState('');
+  const [cards, setCards] = useState([]);
 
 // получение начальных данных
-  React.useEffect(() => {
+  useEffect(() => {
     api.getUserInfo()
       .then((data) => {
         setUserName(data.name)
@@ -21,7 +21,7 @@ function Main(props) {
         console.log(`Ошибка: ${err}`);
       })
   }, [])
-  React.useEffect(() => {
+  useEffect(() => {
     api.getInitialCards()
       .then((cards) => {
         setCards(cards);
