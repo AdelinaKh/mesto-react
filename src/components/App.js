@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
@@ -75,6 +75,7 @@ function App() {
             onClose={closeAllPopups}
             name={"profile"}
             title={"Редактировать профиль"}
+            buttonText={"Сохранить"}
           >
             <input
               id="name"
@@ -114,6 +115,7 @@ function App() {
             onClose={closeAllPopups}
             name={"cards"}
             title={"Новое место"}
+            buttonText={"Создать"}
           >
             <input
               id="title"
@@ -151,6 +153,7 @@ function App() {
             onClose={closeAllPopups}
             name={"avatar"}
             title={"Обновить аватар"}
+            buttonText={"Сохранить"}
           >
             <input
               id="avatar-link"
@@ -167,7 +170,6 @@ function App() {
               Введите ссылку на аватар
             </span>
           </PopupWithForm>
-
           <Footer />
         </div>
       </div>
