@@ -56,7 +56,7 @@ class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: avatar['avatar-link'] //input name
+        avatar: avatar['avatar_link'] //input name
         })
       })
       .then(onError);
@@ -85,6 +85,13 @@ class Api {
     })
       .then(onError);
   }
+  // changeLikeCardStatus(id, like) {
+  //   return fetch(`${this._baseUrl}/cards/${id}/likes`, { 
+  //     method: (like ? 'PUT' : 'DELETE'),
+  //     headers: this._headers,
+  //   })
+  //     .then(onError);
+  // }
 }
 const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-34',
