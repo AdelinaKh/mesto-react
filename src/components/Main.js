@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import profileIcon from "../images/profileIcon.svg";
 import Card from "./Card";
@@ -52,7 +52,6 @@ function Main({ cards, onEditAvatar, onEditProfile, onAddPlace, onCardClick, onC
             card={card}
             link={card.link}
             name={card.name}
-            key={card._id}
             like={card.likes.length}
             onCardClick={onCardClick}
             onCardLike={onCardLike}
