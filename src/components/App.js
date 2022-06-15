@@ -99,10 +99,10 @@ function App() {
     }
   }
 //удаляем карточку
-  function handleDeleteClick(card) {
-    api.deleteCard(card)
+  function handleDeleteClick(cardId) {
+    api.deleteCard(cardId)
       .then(() => {
-        setCards((cards) => cards.filter((c) => c._id !== card._id));
+        setCards((cards) => cards.filter((c) => c._id !== cardId));
       })
       .catch((err) => {
         console.log(`Ошибка: ${err}`);
@@ -143,7 +143,6 @@ function App() {
   }
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <div className="App">
         <div className="page">
           <div className="page__container">
             <Header />
@@ -179,7 +178,6 @@ function App() {
             <Footer />
           </div>
         </div>
-      </div>
     </CurrentUserContext.Provider>
   );
 }

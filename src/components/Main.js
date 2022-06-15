@@ -11,12 +11,12 @@ function Main({ cards, onEditAvatar, onEditProfile, onAddPlace, onCardClick, onC
       <section className="profile section page__content">
         <div className="profile__description">
           <div className="profile__overlay">
-            <img
+          {currentUser.avatar && (<img
               src={currentUser.avatar}
               className="profile__avatar"
               alt="аватар"
               onClick={onEditAvatar}
-            />
+            />)}
             <img
               src={profileIcon}
               className="profile__icon"
