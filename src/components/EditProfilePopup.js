@@ -17,6 +17,9 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   function handleChangeName(evt) {
     setName(evt.target.value);
   }
+  function handleChangeDescription(evt) {
+    setDescription(evt.target.value);
+  }
   function handleSubmit(evt) {
     evt.preventDefault();
     // Передаём значения управляемых компонентов во внешний обработчик
@@ -25,13 +28,13 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       subtitle: description,
     });
   } 
-
+  
   return (
     <PopupWithForm
       onSubmit={handleSubmit}
       isOpen={isOpen}
       onClose={onClose}
-      name={"profile"}
+      name="profile"
       title={"Редактировать профиль"}
       buttonText={"Сохранить"}
     >
@@ -57,7 +60,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
         className="popup__text popup__text_input_job"
         type="text"
         value={description || ""}
-        onChange={handleChangeName}
+        onChange={handleChangeDescription}
         placeholder="О себе"
         autoComplete="off"
         minLength="2"

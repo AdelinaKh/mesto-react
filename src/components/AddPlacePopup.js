@@ -34,7 +34,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
       onSubmit={handleSubmit}
       isOpen={isOpen}
       onClose={onClose}
-      name={"cards"}
+      name="cards"
       title={"Новое место"}
       buttonText={"Создать"}
     >

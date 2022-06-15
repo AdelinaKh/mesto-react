@@ -21,7 +21,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       onSubmit={handleSubmit}
       isOpen={isOpen}
       onClose={onClose}
-      name={"avatar"}
+      name="avatar"
       title={"Обновить аватар"}
       buttonText={"Сохранить"}
     >
