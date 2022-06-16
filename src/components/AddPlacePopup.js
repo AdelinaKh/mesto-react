@@ -35,8 +35,8 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
       isOpen={isOpen}
       onClose={onClose}
       name="cards"
-      title={"Новое место"}
-      buttonText={"Создать"}
+      title="Новое место"
+      buttonText="Создать"
     >
       <input
         id="title"
