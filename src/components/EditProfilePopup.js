@@ -7,7 +7,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   const [description, setDescription] = useState("");
   // Подписка на контекст
   const currentUser = React.useContext(CurrentUserContext);
-
   // После загрузки текущего пользователя из API
   // его данные будут использованы в управляемых компонентах.
   React.useEffect(() => {
@@ -35,8 +34,8 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       isOpen={isOpen}
       onClose={onClose}
       name="profile"
-      title={"Редактировать профиль"}
-      buttonText={"Сохранить"}
+      title="Редактировать профиль"
+      buttonText="Сохранить"
     >
       <input
         id="name"

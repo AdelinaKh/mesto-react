@@ -156,7 +156,7 @@ function App() {
               onCardDelete={handleDeleteClick}
             />
             <ImagePopup
-              name={"resize"}
+              name="resize"
               card={selectedCard}
               onClose={closeAllPopups}
             />

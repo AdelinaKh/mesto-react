@@ -22,8 +22,8 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       isOpen={isOpen}
       onClose={onClose}
       name="avatar"
-      title={"Обновить аватар"}
-      buttonText={"Сохранить"}
+      title="Обновить аватар"
+      buttonText="Сохранить"
     >
       <input
         ref={avatarRef}
